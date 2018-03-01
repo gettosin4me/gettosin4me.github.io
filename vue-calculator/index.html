@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+<div id="app">
+    <div class="content">
+        <div class="container-fluid">
+            <div class="calculator">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="screen-wrapper">
+                            <input class="screen" readonly :value="screen | formatScreen" />
+                        </div>
+                    </div>
+                    <div class="col-md-9" style="width: 100%;">
+                        <div class="">
+                            <span>
+                                <button class="btn calculator-btn logic-btn" @click="reset">Ce|C</button>
+                            </span>
+                        </div>
+                        <div style="margin-top: 20px">
+                        <div class="">
+                          <span>
+                              <button class="calculator-btn" @click="rootNumber">root</button>
+                          </span>
+                                          <span>
+                              <button @click="negativeNumber" class="calculator-btn">+|-</button>
+                          </span>
+                                          <span>
+                              <button @click="percentage" class="calculator-btn">%</button>
+                          </span>
+
+                                      </div>
+                          <div class="">
+              <span>
+                  <button class="calculator-btn" class="calculator-btn" @click="getMemories">mrc</button>
+              </span>
+                              <span>
+                  <button class="calculator-btn" @click="removeFromMemory">m-</button>
+              </span>
+                              <span>
+                  <button class="calculator-btn" @click="saveToMemory">m+</button>
+              </span>
+
+                          </div>
+                          <div class="">
+              <span>
+                  <button class="calculator-btn" @click="setNumber('7')">7</button>
+              </span>
+                              <span>
+                  <button class="calculator-btn" @click="setNumber('8')">8</button>
+              </span>
+                              <span>
+                  <button class="calculator-btn" @click="setNumber('9')">9</button>
+              </span>
+                          </div>
+                          <div class="">
+              <span>
+                  <button class="calculator-btn" @click="setNumber('4')">4</button>
+              </span>
+                              <span>
+                  <button class="calculator-btn" @click="setNumber('5')">5</button>
+              </span>
+                              <span>
+                  <button class="calculator-btn" @click="setNumber('6')">6</button>
+              </span>
+
+                          </div>
+                          <div class="">
+              <span>
+                  <button class="calculator-btn" @click="setNumber('1')">1</button>
+              </span>
+                              <span>
+                  <button class="calculator-btn" @click="setNumber('2')">2</button>
+              </span>
+                              <span>
+                  <button class="calculator-btn" @click="setNumber('3')">3</button>
+              </span>
+
+                          </div>
+                          <div class="">
+              <span>
+                  <button class="calculator-btn" @click="setNumber('0')">0</button>
+              </span>
+                              <span>
+                  <button class="calculator-btn" @click="setNumber('.')">.</button>
+              </span>
+                <span>
+                    <button class="calculator-btn" @click="calculate">=</button>
+                </span>
+
+            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: -30px;" class="col-md-2">
+                        <div>
+                            <button class="btn calculator-btn logic-btn" @click="off">off</button>
+                        </div>
+                        <div>
+                            <button class="btn calculator-btn logic-btn" style="margin-top: 20px;" @click="logic = '/'">
+                                /
+                            </button>
+                        </div>
+                        <div>
+                            <button class="btn calculator-btn logic-btn" @click="logic = '*'">X</button>
+                        </div>
+                        <div>
+                            <button class="btn calculator-btn logic-btn" @click="logic = '-'">-</button>
+                        </div>
+                        <div>
+                            <button class="btn calculator-btn logic-btn addition" @click="logic = '+'">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/dist/app.js"></script>
+</body>
+
+</html>
